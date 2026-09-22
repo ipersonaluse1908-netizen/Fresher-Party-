@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fresher Party 2026 | Handia Polytechnic</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    overflow-x:hidden;
+    font-family:'Montserrat',sans-serif;
+    color:white;
+    background:
+        radial-gradient(circle at 50% 35%,#381b3d 0%,#120c1d 30%,#05050a 68%,#010104 100%);
+}
+
+/* ================= BACKGROUND ================= */
+
+.bg{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+/* colourful glowing orbs */
+
+.orb{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(55px);
+    mix-blend-mode:screen;
+}
+
+.orb1{
+    width:280px;
+    height:280px;
+    background:#ff00aa;
+    left:-120px;
+    top:5%;
+    opacity:.35;
+    animation:orb1 8s infinite alternate;
+}
+
+.orb2{
+    width:300px;
+    height:300px;
+    background:#ff9d00;
+    right:-140px;
+    top:35%;
+    opacity:.30;
+    animation:orb2 10s infinite alternate;
+}
+
+.orb3{
+    width:250px;
+    height:250px;
+    background:#6a35ff;
+    left:25%;
+    bottom:-130px;
+    opacity:.28;
+    animation:orb3 9s infinite alternate;
+}
+
+.orb4{
+    width:180px;
+    height:180px;
+    background:#00d9ff;
+    right:15%;
+    top:-100px;
+    opacity:.20;
+    animation:orb4 7s infinite alternate;
+}
+
+@keyframes orb1{
+    to{transform:translate(180px,150px) scale(1.3)}
+}
+
+@keyframes orb2{
+    to{transform:translate(-130px,-100px) scale(1.2)}
+}
+
+@keyframes orb3{
+    to{transform:translate(100px,-100px) scale(1.3)}
+}
+
+@keyframes orb4{
+    to{transform:translate(-100px,150px)}
+}
+
+
+/* ================= STAGE LIGHTS ================= */
+
+.stage-light{
+    position:absolute;
+    width:170px;
+    height:700px;
+    top:-230px;
+
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.30),
+        rgba(255,190,70,.08),
+        transparent
+    );
+
+    filter:blur(12px);
+    opacity:.22;
+    transform-origin:top center;
+}
+
+.sl1{
+    left:5%;
+    transform:rotate(28deg);
+    animation:stage1 5s infinite alternate ease-in-out;
+}
+
+.sl2{
+    right:5%;
+    transform:rotate(-28deg);
+    animation:stage2 6s infinite alternate ease-in-out;
+}
+
+.sl3{
+    left:42%;
+    transform:rotate(2deg);
+    opacity:.12;
+    animation:stage3 4s infinite alternate;
+}
+
+@keyframes stage1{
+    to{transform:rotate(48deg)}
+}
+
+@keyframes stage2{
+    to{transform:rotate(-48deg)}
+}
+
+@keyframes stage3{
+    to{opacity:.25;transform:scale(1.15)}
+}
+
+
+/* ================= STARS ================= */
+
+.star{
+    position:absolute;
+    color:#fff1a8;
+    font-size:12px;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 15px #ffd45c,
+        0 0 25px #ff9d00;
+
+    animation:twinkle 2s infinite alternate;
+}
+
+.s1{left:8%;top:14%;animation-delay:.2s}
+.s2{left:20%;top:42%;animation-delay:1s}
+.s3{left:82%;top:18%;animation-delay:.6s}
+.s4{left:91%;top:62%;animation-delay:1.4s}
+.s5{left:13%;top:78%;animation-delay:.9s}
+.s6{left:72%;top:82%;animation-delay:1.7s}
+.s7{left:48%;top:8%;animation-delay:.4s}
+.s8{left:58%;top:92%;animation-delay:1.2s}
+
+@keyframes twinkle{
+    from{
+        opacity:.25;
+        transform:scale(.6) rotate(0deg);
+    }
+    to{
+        opacity:1;
+        transform:scale(1.5) rotate(45deg);
+    }
+}
+
+
+/* ================= PARTICLES ================= */
+
+.particle{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:#ffd76a;
+    box-shadow:0 0 12px #ffd76a;
+    animation:particle 6s linear infinite;
+}
+
+.p1{left:10%;top:90%;animation-delay:0s}
+.p2{left:22%;top:80%;animation-delay:1s}
+.p3{left:35%;top:90%;animation-delay:2s}
+.p4{left:49%;top:75%;animation-delay:3s}
+.p5{left:63%;top:90%;animation-delay:1s}
+.p6{left:76%;top:75%;animation-delay:4s}
+.p7{left:90%;top:90%;animation-delay:2s}
+.p8{left:30%;top:30%;animation-delay:3s}
+.p9{left:68%;top:35%;animation-delay:4s}
+.p10{left:50%;top:45%;animation-delay:1s}
+
+@keyframes particle{
+    0%{
+        transform:translateY(50px) scale(.2);
+        opacity:0;
+    }
+    25%{opacity:1}
+    100%{
+        transform:translateY(-250px) scale(1.5);
+        opacity:0;
+    }
+}
+
+
+/* ================= MAIN ================= */
+
+.page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:25px 14px;
+    position:relative;
+    z-index:5;
+}
+
+.card{
+    width:100%;
+    max-width:490px;
+    position:relative;
+    overflow:hidden;
+
+    padding:30px 21px 25px;
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.035)
+        );
+
+    border:1px solid rgba(255,210,100,.35);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    box-shadow:
+        0 0 30px rgba(255,160,30,.15),
+        0 0 80px rgba(255,0,160,.08),
+        inset 0 1px 0 rgba(255,255,255,.2);
+
+    animation:cardIn 1.1s ease;
+}
+
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.94);
+    }
+    to{
+        opacity:1;
+        transform:none;
+    }
+}
+
+
+/* animated border */
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:37px;
+
+    background:conic-gradient(
+        from 0deg,
+        transparent,
+        #ffbd38,
+        transparent 15%,
+        #ff38bd,
+        transparent 35%,
+        #8e55ff,
+        transparent 60%,
+        #ffd45c,
+        transparent 80%
+    );
+
+    animation:rotateBorder 6s linear infinite;
+    z-index:-2;
+}
+
+.card::after{
+    content:"";
+    position:absolute;
+    inset:1px;
+    border-radius:34px;
+    background:#08070c;
+    z-index:-1;
+}
+
+@keyframes rotateBorder{
+    to{transform:rotate(360deg)}
+}
+
+
+/* ================= TOP ================= */
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.event-no{
+    color:#777;
+    font-size:9px;
+    letter-spacing:3px;
+}
+
+.badge{
+    padding:8px 12px;
+    border-radius:50px;
+
+    color:#ffe28b;
+
+    font-size:8px;
+    font-weight:800;
+    letter-spacing:1.5px;
+
+    border:1px solid rgba(255,211,100,.35);
+
+    background:rgba(255,190,40,.08);
+
+    box-shadow:
+        0 0 18px rgba(255,190,40,.15);
+}
+
+.badge span{
+    color:#ffcc4d;
+}
+
+
+/* ================= COLLEGE ================= */
+
+.college{
+    margin-top:29px;
+
+    text-align:center;
+
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:4px;
+
+    color:#eee;
+}
+
+.department{
+    margin-top:8px;
+
+    text-align:center;
+
+    font-size:10px;
+    letter-spacing:2px;
+
+    color:#aaa;
+}
+
+
+/* ================= PARTY TITLE ================= */
+
+.title-wrap{
+    text-align:center;
+    position:relative;
+    margin-top:20px;
+}
+
+.small-crown{
+    font-size:22px;
+    display:block;
+    margin-bottom:7px;
+
+    filter:
+        drop-shadow(0 0 7px #ffd45c)
+        drop-shadow(0 0 20px #ff9d00);
+
+    animation:crownFloat 2s infinite alternate;
+}
+
+@keyframes crownFloat{
+    to{
+        transform:translateY(-5px) rotate(3deg);
+    }
+}
+
+.title{
+    font-family:'Cinzel',serif;
+
+    font-size:48px;
+    line-height:.95;
+
+    font-weight:800;
+    letter-spacing:-2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ffd65c,
+            #fff4c2,
+            #ffae22,
+            #fff
+        );
+
+    background-size:300% auto;
+
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+
+    animation:titleGlow 4s linear infinite;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255,205,80,.35))
+        drop-shadow(0 0 30px rgba(255,130,0,.15));
+}
+
+@keyframes titleGlow{
+    to{
+        background-position:300% center;
+    }
+}
+
+.subtitle{
+    margin-top:11px;
+
+    color:#999;
+
+    font-size:8px;
+    letter-spacing:2px;
+}
+
+
+/* ================= DECORATIVE LINE ================= */
+
+.line{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    margin:23px 0;
+}
+
+.line span{
+    height:1px;
+    flex:1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ffca55
+        );
+
+    box-shadow:0 0 8px #ffb52e;
+}
+
+.line span:last-child{
+    background:
+        linear-gradient(
+            90deg,
+            #ffca55,
+            transparent
+        );
+}
+
+.line b{
+    color:#ffd65c;
+    font-size:12px;
+
+    text-shadow:
+        0 0 10px #ffb52e;
+}
+
+
+/* ================= DATE ================= */
+
+.date-box{
+    position:relative;
+    overflow:hidden;
+
+    padding:22px 10px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255,180,40,.13),
+            rgba(255,255,255,.025) 65%
+        );
+
+    border:1px solid rgba(255,210,90,.25);
+
+    box-shadow:
+        inset 0 0 25px rgba(255,170,20,.04);
+}
+
+.date-box::after{
+    content:"✨";
+
+    position:absolute;
+
+    right:16px;
+    top:13px;
+
+    font-size:13px;
+
+    animation:twinkle 1.8s infinite alternate;
+}
+
+.save{
+    color:#777;
+
+    font-size:8px;
+    letter-spacing:4px;
+}
+
+.date{
+    margin-top:8px;
+
+    font-family:'Cinzel',serif;
+
+    font-size:28px;
+    font-weight:800;
+
+    color:#ffe18a;
+
+    text-shadow:
+        0 0 12px rgba(255,190,50,.4),
+        0 0 30px rgba(255,140,0,.15);
+}
+
+.date-sub{
+    margin-top:7px;
+
+    font-size:8px;
+    letter-spacing:3px;
+
+    color:#888;
+}
+
+
+/* ================= INFO ================= */
+
+.info{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:10px;
+
+    margin-top:11px;
+}
+
+.info-card{
+    padding:16px 8px;
+
+    text-align:center;
+
+    border-radius:19px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.06),
+            rgba(255,255,255,.02)
+        );
+
+    border:1px solid rgba(255,255,255,.10);
+
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-5px);
+
+    border-color:#ffc94f;
+
+    box-shadow:
+        0 0 25px rgba(255,180,30,.15);
+}
+
+.icon{
+    font-size:20px;
+
+    filter:
+        drop-shadow(0 0 7px rgba(255,205,70,.7));
+}
+
+.label{
+    margin-top:7px;
+
+    color:#666;
+
+    font-size:7px;
+    letter-spacing:2px;
+}
+
+.value{
+    margin-top:5px;
+
+    color:#eee;
+
+    font-size:12px;
+    font-weight:800;
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome{
+    margin-top:14px;
+
+    padding:13px;
+
+    text-align:center;
+
+    border-radius:17px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,195,50,.07),
+            transparent
+        );
+
+    border:1px solid rgba(255,205,80,.10);
+
+    color:#999;
+
+    font-size:8px;
+    letter-spacing:1.8px;
+}
+
+.welcome strong{
+    color:#ffd76a;
+}
+
+
+/* ================= STUDENT BUTTON ================= */
+
+.cta{
+    display:block;
+
+    position:relative;
+    overflow:hidden;
+
+    margin-top:20px;
+
+    padding:18px;
+
+    text-align:center;
+    text-decoration:none;
+
+    border-radius:18px;
+
+    color:#171009;
+
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:1.8px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #d89013,
+            #ffe79b,
+            #ffb72b,
+            #ffe79b,
+            #d89013
+        );
+
+    background-size:300% auto;
+
+    animation:buttonMove 4s linear infinite;
+
+    box-shadow:
+        0 0 25px rgba(255,190,40,.25),
+        0 0 60px rgba(255,120,0,.08),
+        inset 0 1px 0 white;
+
+    transition:.3s;
+}
+
+.cta:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+        0 0 40px rgba(255,190,40,.45);
+}
+
+@keyframes buttonMove{
+    to{
+        background-position:300% center;
+    }
+}
+
+.cta::after{
+    content:"";
+
+    position:absolute;
+
+    width:40%;
+    height:100%;
+
+    top:0;
+    left:-100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.7),
+            transparent
+        );
+
+    transform:skewX(-25deg);
+
+    animation:buttonLight 3s infinite;
+}
+
+@keyframes buttonLight{
+    0%,55%{left:-100%}
+    100%{left:150%}
+}
+
+
+/* ================= TAGLINE ================= */
+
+.tagline{
+    margin-top:18px;
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:7px;
+    letter-spacing:4px;
+}
+
+
+/* ================= INSTAGRAM CREDIT ================= */
+
+.credit{
+    display:flex;
+    justify-content:center;
+
+    margin-top:17px;
+}
+
+.credit-box{
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    padding:9px 16px;
+
+    border-radius:50px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:1px solid rgba(255,210,100,.25);
+
+    color:#999;
+
+    font-size:10px;
+
+    box-shadow:
+        0 0 20px rgba(255,150,30,.05);
+
+    transition:.3s;
+}
+
+.credit-box:hover{
+    transform:translateY(-2px);
+
+    border-color:#ffb82e;
+
+    box-shadow:
+        0 0 30px rgba(255,170,30,.2);
+}
+
+.instagram{
+    width:21px;
+    height:21px;
+}
+
+.credit strong{
+    color:#ffe18a;
+
+    text-shadow:
+        0 0 10px rgba(255,190,50,.3);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:390px){
+
+    .card{
+        padding:25px 16px 22px;
+    }
+
+    .title{
+        font-size:42px;
+    }
+
+    .college{
+        font-size:11px;
+        letter-spacing:3px;
+    }
+
+    .department{
+        font-size:8px;
+    }
+
+    .date{
+        font-size:24px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= BACKGROUND ================= -->
+
+<div class="bg">
+
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+
+    <div class="stage-light sl1"></div>
+    <div class="stage-light sl2"></div>
+    <div class="stage-light sl3"></div>
+
+    <div class="star s1">✦</div>
+    <div class="star s2">✧</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">✧</div>
+    <div class="star s5">✦</div>
+    <div class="star s6">✧</div>
+    <div class="star s7">✦</div>
+    <div class="star s8">✧</div>
+
+    <div class="particle p1"></div>
+    <div class="particle p2"></div>
+    <div class="particle p3"></div>
+    <div class="particle p4"></div>
+    <div class="particle p5"></div>
+    <div class="particle p6"></div>
+    <div class="particle p7"></div>
+    <div class="particle p8"></div>
+    <div class="particle p9"></div>
+    <div class="particle p10"></div>
+
+</div>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="page">
+
+<div class="card">
+
+
+    <!-- TOP -->
+
+    <div class="top">
+
+        <div class="event-no">
+            01 • 10 • 2026
+        </div>
+
+        <div class="badge">
+            <span>✦</span> SPECIAL EVENT
+        </div>
+
+    </div>
+
+
+    <!-- COLLEGE -->
+
+    <div class="college">
+        HANDIA POLYTECHNIC
+    </div>
+
+    <div class="department">
+        DEPARTMENT OF CIVIL ENGINEERING
+    </div>
+
+
+    <!-- TITLE -->
+
+    <div class="title-wrap">
+
+        <span class="small-crown">👑</span>
+
+        <div class="title">
+            FRESHER<br>PARTY
+        </div>
+
+        <div class="subtitle">
+            ✨ NEW BEGINNING • NEW FRIENDS • NEW MEMORIES ✨
+        </div>
+
+    </div>
+
+
+    <!-- LINE -->
+
+    <div class="line">
+
+        <span></span>
+
+        <b>✦</b>
+
+        <span></span>
+
+    </div>
+
+
+    <!-- DATE -->
+
+    <div class="date-box">
+
+        <div class="save">
+            ✨ SAVE THE DATE ✨
+        </div>
+
+        <div class="date">
+            01 OCTOBER 2026
+        </div>
+
+        <div class="date-sub">
+            🎉 ONE DAY • ONE MEMORY • ONE BEGINNING 🎉
+        </div>
+
+    </div>
+
+
+    <!-- INFO -->
+
+    <div class="info">
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                📍
+            </div>
+
+            <div class="label">
+                VENUE
+            </div>
+
+            <div class="value">
+                MAIN HALL
+            </div>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div class="icon">
+                👑
+            </div>
+
+            <div class="label">
+                ORGANIZED BY
+            </div>
+
+            <div class="value">
+                SENIORS
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- WELCOME -->
+
+    <div class="welcome">
+
+        🎊 A WARM WELCOME TO OUR
+        <strong>NEW FRESHERS</strong> 🎊
+
+    </div>
+
+
+    <!-- STUDENT LIST -->
+
+    <a href="#" class="cta">
+
+        ✨ SEE STUDENT LIST &nbsp; → ✨
+
+    </a>
+
+
+    <!-- TAGLINE -->
+
+    <div class="tagline">
+
+        ✦ CELEBRATE • CONNECT • CREATE ✦
+
+    </div>
+
+
+    <!-- INSTAGRAM -->
+
+    <div class="credit">
+
+        <div class="credit-box">
+
+
+            <!-- Instagram logo -->
+
+            <svg
+                class="instagram"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+
+                <defs>
+
+                    <linearGradient
+                        id="ig"
+                        x1="3"
+                        y1="21"
+                        x2="21"
+                        y2="3">
+
+                        <stop stop-color="#FFD600"/>
+                        <stop offset=".35" stop-color="#FF7A00"/>
+                        <stop offset=".65" stop-color="#FF0169"/>
+                        <stop offset="1" stop-color="#D300C5"/>
+
+                    </linearGradient>
+
+                </defs>
+
+                <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                    stroke="url(#ig)"
+                    stroke-width="2"/>
+
+                <circle
+                    cx="12"
+                    cy="12"
+                    r="4.2"
+                    stroke="url(#ig)"
+                    stroke-width="2"/>
+
+                <circle
+                    cx="17.4"
+                    cy="6.7"
+                    r="1.15"
+                    fill="#FF4B91"/>
+
+            </svg>
+
+
+            <span>
+                Design by <strong>@igarrv</strong>
+            </span>
+
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</body>
+  </html>
